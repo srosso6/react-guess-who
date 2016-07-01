@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  font-size: 1em;
+}
+
+.characters {
+  width: 50%;
+  height: 450px;
+  /*border: 2px solid blue;*/
+}
+
+.img {
+  border: 2px solid red;
+  height: 33.333333333%;
+  width: 24%;
+  margin: 0 0.5%;
+}
