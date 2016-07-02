@@ -2,6 +2,7 @@ var React = require('react');
 var data = require("../characters.js");
 var CharacterList = require("./CharacterList.jsx");
 var CharacteristicForm = require("./CharacteristicForm.jsx");
+var AnswerForm = require("./AnswerForm.jsx");
 var _ = require("lodash");
 
 
@@ -12,7 +13,8 @@ var GameBox = React.createClass({
       characters: data,
       characterToGuess: null,
       selectedChar: "Gender",
-      selectedCharOpt: null
+      selectedCharOpt: null,
+      guess: null
     };
   },
 
@@ -49,6 +51,22 @@ var GameBox = React.createClass({
     }
   },
 
+  setCharacterGuess: function (characterName) {
+    this.setState({guess: characterName})
+  },
+
+  checkCharacter: function () {
+    if(this.state.characterToGuess.name === this.state.guess ) {
+      return (
+        "Correct, you win!"
+      )
+    } else {
+      return (
+        "Incorrect, I am " + this.state.characterToGuess.name
+      )
+    }
+  },
+
   render: function() {
 
     var checkCharResponse = null;
@@ -56,19 +74,29 @@ var GameBox = React.createClass({
       checkCharResponse = this.checkChar();
     }
 
+    var checkCharacterResponse = null;
+    if(this.state.guess) {
+      checkCharacterResponse = this.checkCharacter();
+    }
+
 console.log(this.state.characterToGuess);
 console.log("rendered");
 
     return (
       <div>
-        <h1>Guess Who?</h1>
+        <h1>Who Am I?</h1>
         <CharacterList characters={this.state.characters}/>
         <CharacteristicForm
           chars={this.listCharacteristics()} onSelectChar={this.setSelectedChar}
           charOpts={this.listCharOptions()}
           onSelectCharOpt={this.setSelectedCharOpt}
         />
-      <h3>{checkCharResponse}</h3>
+        <h3>{checkCharResponse}</h3>
+        <AnswerForm
+          characters={this.state.characters}
+          onSelectCharacter={this.setCharacterGuess}
+        />
+        <h3>{checkCharacterResponse}</h3>
       </div>
     );
   }

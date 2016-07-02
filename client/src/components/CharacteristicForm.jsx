@@ -2,14 +2,9 @@ var React = require('react');
 
 var CharacteristicForm = React.createClass({
 
-  // getInitialState: function () {
-  //   return { selectedIndex: null };
-  // },
-
   handleCharSelection: function (event) {
     event.preventDefault();
     var newIndex = event.target.value;
-    // this.setState({selectedIndex: newIndex});
     this.props.onSelectChar(newIndex);
   },
 
@@ -54,5 +49,3 @@ var CharacteristicForm = React.createClass({
 });
 
 module.exports = CharacteristicForm;
-
-// value={this.state.selectedIndex}

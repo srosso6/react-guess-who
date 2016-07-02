@@ -5,7 +5,12 @@ var Character = React.createClass({
   render: function() {
 
     return (
-      <img src={this.props.img} className="img"/>
+      <div className="container">
+        <div className="img">
+          <img src={this.props.img} className="front"/>
+          <img src="img/card.jpeg" className="back" />
+        </div>
+      </div>
     );
   }
 
