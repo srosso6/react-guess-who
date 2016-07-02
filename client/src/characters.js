@@ -2,113 +2,121 @@ module.exports = [
   { id: 1,
     name: "Buffy Summers",
     img: "img/buffy.jpeg",
-    gender: "f",
-    slayer: true,
-    vampire: false,
-    villain: "no"
+    chars: {
+      Gender: "Female",
+      Slayer: "Yes",
+      Vampire: "No",
+      Villain: "No"
+    }
   },
   { id: 2,
     name: "Rupert Giles",
     img: "img/giles.jpeg",
-    gender: "m",
-    slayer: false,
-    vampire: false,
-    villain: "no"
+    chars: {
+      Gender: "Male",
+      Slayer: "No",
+      Vampire: "No",
+      Villain: "No"
+    }
   },
   { id: 3,
     name: "Spike",
     img: "img/spike.jpeg",
-    gender: "m",
-    slayer: false,
-    vampire: true,
-    villain: "has been"
+    chars: {
+      Gender: "Male",
+      Slayer: "No",
+      Vampire: "Yes",
+      Villain: "Has been - isn't now"
+    }
   },
   { id: 4,
     name: "Willow Rosenberg",
     img: "img/dark_willow.jpeg",
-    gender: "f",
-    slayer: false,
-    vampire: false,
-    villain: "has been"
+    chars: {
+      Gender: "Female",
+      Slayer: "No",
+      Vampire: "No",
+      Villain: "Has been - isn't now"
+    }
   },
   { id: 5,
     name: "Caleb",
     img: "img/caleb.jpeg",
-    gender: "m",
-    slayer: false,
-    vampire: false,
-    villain: "yes"
+    chars: {
+      Gender: "Male",
+      Slayer: "No",
+      Vampire: "No",
+      Villain: "Yes"
+    }
   },
   { id: 6,
     name: "Kendra",
     img: "img/kendra.jpeg",
-    gender: "f",
-    slayer: true,
-    vampire: false,
-    villain: "no"
+    chars: {
+      Gender: "Female",
+      Slayer: "Yes",
+      Vampire: "No",
+      Villain: "No"
+    }
   },
   { id: 7,
     name: "Faith",
     img: "img/faith.jpeg",
-    gender: "f",
-    slayer: true,
-    vampire: false,
-    villain: "has been"
+    chars: {
+      Gender: "Female",
+      Slayer: "Yes",
+      Vampire: "No",
+      Villain: "Has been - isn't now"
+    }
   },
   { id: 8,
     name: "Riley Finn",
     img: "img/riley.jpeg",
-    gender: "m",
-    slayer: false,
-    vampire: false,
-    villain: "no"
+    chars: {
+      Gender: "Male",
+      Slayer: "No",
+      Vampire: "No",
+      Villain: "No"
+    }
   },
   { id: 9,
     name: "Xander Harris",
     img: "img/xander.jpeg",
-    gender: "m",
-    slayer: false,
-    vampire: false,
-    villain: "no"
+    chars: {
+      Gender: "Male",
+      Slayer: "No",
+      Vampire: "No",
+      Villain: "No"
+    }
   },
   { id: 10,
     name: "Angel",
     img: "img/angel.jpeg",
-    gender: "m",
-    slayer: false,
-    vampire: true,
-    villain: "has been"
+    chars: {
+      Gender: "Male",
+      Slayer: "No",
+      Vampire: "Yes",
+      Villain: "Has been - isn't now"
+    }
   },
   { id: 11,
     name: "Adam",
     img: "img/adam.jpeg",
-    gender: "m",
-    slayer: false,
-    vampire: false,
-    villain: "yes"
+    chars: {
+      Gender: "Male",
+      Slayer: "No",
+      Vampire: "No",
+      Villain: "Yes"
+    }
   },
   { id: 12,
     name: "Drusilla",
     img: "img/drusilla.jpeg",
-    gender: "f",
-    slayer: false,
-    vampire: true,
-    villain: "yes"
+    chars: {
+      Gender: "Female",
+      Slayer: "No",
+      Vampire: "Yes",
+      Villain: "Yes"
+    }
   }
-  // { id: 13,
-  //   name: "Anya",
-  //   img: "img/anya.jpeg",
-  //   gender: "f",
-  //   slayer: false,
-  //   vampire: false,
-  //   villain: "has been"
-  // },
-  // { id: 14,
-  //   name: "Glory",
-  //   img: "img/glory.jpeg",
-  //   gender: "f",
-  //   slayer: false,
-  //   vampire: false,
-  //   villain: "yes"
-  // }
 ]
