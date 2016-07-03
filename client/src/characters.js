@@ -40,7 +40,7 @@ module.exports = [
   },
   { id: 4,
     name: "Willow Rosenberg",
-    img: "img/dark_willow.jpeg",
+    img: "img/willow.jpeg",
     chars: {
       Gender: "Female",
       Slayer: "No",
