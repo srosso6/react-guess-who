@@ -1,6 +1,6 @@
-var React = require('react');
+const React = require('react');
 
-var Character = React.createClass({
+const Character = React.createClass({
 
   handleClick: function (event) {
     this.props.onCardClick(event.target);

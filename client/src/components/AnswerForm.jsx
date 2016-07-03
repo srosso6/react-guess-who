@@ -1,20 +1,18 @@
-var React = require('react');
+const React = require('react');
 
-var AnswerForm = React.createClass({
+const AnswerForm = React.createClass({
 
   handleCharacterSelection: function (event) {
     event.preventDefault();
-    var characterName = event.target.value;
+    let characterName = event.target.value;
     this.props.onSelectCharacter(characterName);
   },
 
   render: function() {
 
-    var characters = this.props.characters.map(function (character, index) {
-      return(
-        <option key={index} value={character.name}>{character.name}</option>
-      )
-    });
+    const characters = this.props.characters.map((character, index) =>
+      <option key={index} value={character.name}>{character.name}</option>
+    );
 
     return (
       <div>

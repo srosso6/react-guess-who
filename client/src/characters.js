@@ -1,8 +1,3 @@
-
-// something to distinguish xander and giles -- giles can use magic?
-
-
-
 module.exports = [
   { id: 1,
     name: "Rupert Giles",

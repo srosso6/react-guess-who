@@ -1,12 +1,12 @@
-var React = require('react');
-var data = require("../characters.js");
-var CharacterList = require("./CharacterList.jsx");
-var CharacteristicForm = require("./CharacteristicForm.jsx");
-var AnswerForm = require("./AnswerForm.jsx");
-var _ = require("lodash");
+const React = require('react');
+const data = require("../characters.js");
+const CharacterList = require("./CharacterList.jsx");
+const CharacteristicForm = require("./CharacteristicForm.jsx");
+const AnswerForm = require("./AnswerForm.jsx");
+const _ = require("lodash");
 
 
-var GameBox = React.createClass({
+const GameBox = React.createClass({
 
   getInitialState: function() {
     return {
@@ -19,7 +19,7 @@ var GameBox = React.createClass({
   },
 
   componentDidMount: function () {
-    var character = this.state.characters[Math.floor(Math.random() * this.state.characters.length)];
+    let character = this.state.characters[Math.floor(Math.random() * this.state.characters.length)];
     this.setState({characterToGuess: character})
   },
 
@@ -28,14 +28,14 @@ var GameBox = React.createClass({
   },
 
   setSelectedChar: function (charIndex) {
-    var selectedChar = this.listCharacteristics()[charIndex]
+    let selectedChar = this.listCharacteristics()[charIndex]
     this.setState({selectedChar: selectedChar});
     this.setState({selectedCharOpt: null});
 
   },
 
   listCharOptions: function () {
-    var charOptions = this.state.characters.map(function(character) {
+    let charOptions = this.state.characters.map(function(character) {
       return character["chars"][this.state.selectedChar]
     }.bind(this))
     return _.uniq(charOptions);
@@ -64,7 +64,7 @@ var GameBox = React.createClass({
       )
     } else {
       return (
-        "No, I am " + this.state.characterToGuess.name +"!"
+        `No, I am ${this.state.characterToGuess.name}!`
       )
     }
   },
@@ -77,12 +77,12 @@ var GameBox = React.createClass({
 
   render: function() {
 
-    var checkCharResponse = null;
+    let checkCharResponse = null;
     if(this.state.selectedCharOpt) {
       checkCharResponse = this.checkChar();
     }
 
-    var checkCharacterResponse = null;
+    let checkCharacterResponse = null;
     if(this.state.guess) {
       checkCharacterResponse = this.checkCharacter();
     }

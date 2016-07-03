@@ -1,37 +1,37 @@
-var React = require('react');
+const React = require('react');
 
-var CharacteristicForm = React.createClass({
+const CharacteristicForm = React.createClass({
 
   handleCharSelection: function (event) {
     event.preventDefault();
-    var newIndex = event.target.value;
+    let newIndex = event.target.value;
     this.props.onSelectChar(newIndex);
     event.target.nextSibling.selectedIndex = 0;
   },
 
   handleCharOptSelection: function (event) {
     event.preventDefault();
-    var charOpt = event.target.value;
+    let charOpt = event.target.value;
     this.props.onSelectCharOpt(charOpt);
   },
 
   render: function() {
 
-    var characteristics = this.props.chars.map(function(char, index) {
-        return(
-          <option key={index} value={index}>{char}</option>
-        )
-    });
+    const characteristics = this.props.chars.map((char, index) =>
+      <option key={index} value={index}>{char}</option>
+    );
 
     var charOptions = null;
+    console.log("here 1", charOptions);
     if(this.props.charOpts) {
-      var charOptions = this.props.charOpts.map(function (charOpt, index) {
-        return(
-            <option key={index} value={charOpt}>{charOpt}</option>
-        )
-      });
-    }
+      console.log("here 2", charOptions);
+      var charOptions = this.props.charOpts.map((charOpt, index) =>
+        <option key={index} value={charOpt}>{charOpt}</option>
+      );
+      console.log("here 3", charOptions);
+    };
 
+console.log("here 4", charOptions);
     return (
       <div>
         <label>Ask a question:</label>
@@ -51,5 +51,3 @@ var CharacteristicForm = React.createClass({
 });
 
 module.exports = CharacteristicForm;
-
-        // <label>Choose a characteristic type:</label>
