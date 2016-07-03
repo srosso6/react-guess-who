@@ -67,6 +67,12 @@ var GameBox = React.createClass({
     }
   },
 
+  flip: function (div) {
+    div.parentNode.classList.toggle("flipped");
+  },
+
+  // The Element.classList is a read-only property which returns a live DOMTokenList collection of the class attributes of the element.
+
   render: function() {
 
     var checkCharResponse = null;
@@ -79,13 +85,16 @@ var GameBox = React.createClass({
       checkCharacterResponse = this.checkCharacter();
     }
 
-console.log(this.state.characterToGuess);
-console.log("rendered");
+    console.log(this.state.characterToGuess);
+    console.log("rendered");
 
     return (
       <div>
         <h1>Who Am I?</h1>
-        <CharacterList characters={this.state.characters}/>
+        <CharacterList
+          characters={this.state.characters}
+          onCardClick={this.flip}
+        />
         <CharacteristicForm
           chars={this.listCharacteristics()} onSelectChar={this.setSelectedChar}
           charOpts={this.listCharOptions()}
