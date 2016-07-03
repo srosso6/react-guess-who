@@ -1,22 +1,33 @@
+
+// something to distinguish xander and giles -- giles can use magic?
+
+
+
 module.exports = [
   { id: 1,
-    name: "Buffy Summers",
-    img: "img/buffy.jpeg",
-    chars: {
-      Gender: "Female",
-      Slayer: "Yes",
-      Vampire: "No",
-      Villain: "No"
-    }
-  },
-  { id: 2,
     name: "Rupert Giles",
     img: "img/giles.jpeg",
     chars: {
       Gender: "Male",
       Slayer: "No",
       Vampire: "No",
-      Villain: "No"
+      Villain: "No",
+      "In Musical Episode": "Yes",
+      "In series 7": "Yes",
+      "British": "Yes"
+    }
+  },
+  { id: 2,
+    name: "Buffy Summers",
+    img: "img/buffy.jpeg",
+    chars: {
+      Gender: "Female",
+      Slayer: "Yes",
+      Vampire: "No",
+      Villain: "No",
+      "In Musical Episode": "Yes",
+      "In series 7": "Yes",
+      "British": "No"
     }
   },
   { id: 3,
@@ -26,7 +37,10 @@ module.exports = [
       Gender: "Male",
       Slayer: "No",
       Vampire: "Yes",
-      Villain: "Has been - isn't now"
+      Villain: "Has been - isn't now",
+      "In Musical Episode": "Yes",
+      "In series 7": "Yes",
+      "British": "Yes"
     }
   },
   { id: 4,
@@ -36,7 +50,10 @@ module.exports = [
       Gender: "Female",
       Slayer: "No",
       Vampire: "No",
-      Villain: "Has been - isn't now"
+      Villain: "Has been - isn't now",
+      "In Musical Episode": "Yes",
+      "In series 7": "Yes",
+      "British": "No"
     }
   },
   { id: 5,
@@ -46,7 +63,11 @@ module.exports = [
       Gender: "Male",
       Slayer: "No",
       Vampire: "No",
-      Villain: "Yes"
+      Villain: "Yes",
+      "In Musical Episode": "No",
+      "Appearances": "Series 7",
+      "In series 7": "Yes",
+      "British": "No"
     }
   },
   { id: 6,
@@ -56,7 +77,10 @@ module.exports = [
       Gender: "Female",
       Slayer: "Yes",
       Vampire: "No",
-      Villain: "No"
+      Villain: "No",
+      "In Musical Episode": "No",
+      "In series 7": "No",
+      "British": "No"
     }
   },
   { id: 7,
@@ -66,7 +90,10 @@ module.exports = [
       Gender: "Female",
       Slayer: "Yes",
       Vampire: "No",
-      Villain: "Has been - isn't now"
+      Villain: "Has been - isn't now",
+      "In Musical Episode": "No",
+      "In series 7": "Yes",
+      "British": "No"
     }
   },
   { id: 8,
@@ -76,7 +103,10 @@ module.exports = [
       Gender: "Male",
       Slayer: "No",
       Vampire: "No",
-      Villain: "No"
+      Villain: "No",
+      "In Musical Episode": "No",
+      "In series 7": "No",
+      "British": "No"
     }
   },
   { id: 9,
@@ -86,7 +116,10 @@ module.exports = [
       Gender: "Male",
       Slayer: "No",
       Vampire: "No",
-      Villain: "No"
+      Villain: "No",
+      "In Musical Episode": "Yes",
+      "In series 7": "Yes",
+      "British": "No"
     }
   },
   { id: 10,
@@ -96,7 +129,10 @@ module.exports = [
       Gender: "Male",
       Slayer: "No",
       Vampire: "Yes",
-      Villain: "Has been - isn't now"
+      Villain: "Has been - isn't now",
+      "In Musical Episode": "No",
+      "In series 7": "Yes",
+      "British": "No"
     }
   },
   { id: 11,
@@ -106,7 +142,10 @@ module.exports = [
       Gender: "Male",
       Slayer: "No",
       Vampire: "No",
-      Villain: "Yes"
+      Villain: "Yes",
+      "In Musical Episode": "No",
+      "In series 7": "No",
+      "British": "No"
     }
   },
   { id: 12,
@@ -116,7 +155,10 @@ module.exports = [
       Gender: "Female",
       Slayer: "No",
       Vampire: "Yes",
-      Villain: "Yes"
+      Villain: "Yes",
+      "In Musical Episode": "No",
+      "In series 7": "No",
+      "British": "No"
     }
   }
 ]

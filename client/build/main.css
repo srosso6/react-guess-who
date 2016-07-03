@@ -4,18 +4,66 @@
 
 body {
   background-color: #000;
-  color: #fff;
+  color: #9F0312;
+  background-image: url("img/background.jpeg");
+  background-position: right top;
+  background-repeat: no-repeat;
 }
 
 h1 {
+  font-size: 2em;
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+  padding-top: 50px;
+  padding-left: 50px;
+}
+
+h3 {
   font-size: 1em;
 }
 
 .characters {
-  display: inline-block;
+  float: left;
   width: 50%;
   height: 450px;
-  border: 2px solid blue;
+  margin-top: 15px;
+  padding-left: 15px;
+}
+
+.qanda {
+  float: left;
+  width: 40%;
+  text-align: center;
+  margin-top: 8%;
+  margin-left: 5%;
+  padding: 5px 5px;
+  padding-top: 20px;
+  border-radius: 15%;
+  background-color: rgba(159,3,18, 0.3);
+}
+
+
+/* FORMS */
+
+label {
+  margin: 0;
+  font-size: 1em;
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  text-align: left;
+}
+
+select {
+  margin: 0;
+  display: block;
+  width: 80%;
+  height: 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 10px 10px;
+  background-color: #BF6868;
 }
 
 
@@ -26,7 +74,6 @@ h1 {
   height: 33.333333333%;
   width: 24%;
   margin: 0 0.5%;
-  border: 2px solid red;
   border-radius: 5%;
   position: relative;
   -webkit-perspective: 800px;
@@ -45,6 +92,7 @@ h1 {
   position: absolute;
   transform-style: preserve-3d;
   transition: transform 1s;
+  border: 2px solid #7E0312;
   /* The inner container is the element that actually flips, spinning 180 degrees when the parent container is hovered over. This is also where you control the transition speed. Changing the rotation to -180deg spins the elements in the reverse direction.*/
 }
 

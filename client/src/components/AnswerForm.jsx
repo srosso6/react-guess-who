@@ -18,8 +18,10 @@ var AnswerForm = React.createClass({
 
     return (
       <div>
+        <label>Guess a character:</label>
         <select
           onChange={this.handleCharacterSelection}>
+          <option key={-1} value="default">--Select--</option>
           {characters}
         </select>
       </div>

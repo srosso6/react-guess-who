@@ -30,6 +30,8 @@ var GameBox = React.createClass({
   setSelectedChar: function (charIndex) {
     var selectedChar = this.listCharacteristics()[charIndex]
     this.setState({selectedChar: selectedChar});
+    this.setState({selectedCharOpt: null});
+
   },
 
   listCharOptions: function () {
@@ -45,9 +47,9 @@ var GameBox = React.createClass({
 
   checkChar: function () {
     if(this.state.characterToGuess["chars"][this.state.selectedChar] === this.state.selectedCharOpt) {
-      return "True";
+      return "Answer: True";
     } else {
-      return "False";
+      return "Answer: False";
     }
   },
 
@@ -58,11 +60,11 @@ var GameBox = React.createClass({
   checkCharacter: function () {
     if(this.state.characterToGuess.name === this.state.guess ) {
       return (
-        "Correct, you win!"
+        "Yay, that's me!"
       )
     } else {
       return (
-        "Incorrect, I am " + this.state.characterToGuess.name
+        "No, I am " + this.state.characterToGuess.name +"!"
       )
     }
   },
@@ -90,22 +92,25 @@ var GameBox = React.createClass({
 
     return (
       <div>
-        <h1>Who Am I?</h1>
         <CharacterList
           characters={this.state.characters}
           onCardClick={this.flip}
-        />
-        <CharacteristicForm
-          chars={this.listCharacteristics()} onSelectChar={this.setSelectedChar}
-          charOpts={this.listCharOptions()}
-          onSelectCharOpt={this.setSelectedCharOpt}
-        />
-        <h3>{checkCharResponse}</h3>
-        <AnswerForm
-          characters={this.state.characters}
-          onSelectCharacter={this.setCharacterGuess}
-        />
-        <h3>{checkCharacterResponse}</h3>
+          />
+        <h1>Who Am I?</h1>
+        <div className="qanda">
+          <CharacteristicForm
+            chars={this.listCharacteristics()} onSelectChar={this.setSelectedChar}
+            charOpts={this.listCharOptions()}
+            onSelectCharOpt={this.setSelectedCharOpt}
+          />
+          <h3>{checkCharResponse}</h3>
+          <AnswerForm
+            characters={this.state.characters}
+            onSelectCharacter={this.setCharacterGuess}
+          />
+          <h3>{checkCharacterResponse}</h3>
+        </div>
+
       </div>
     );
   }

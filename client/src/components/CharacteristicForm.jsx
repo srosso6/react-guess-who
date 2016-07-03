@@ -6,6 +6,7 @@ var CharacteristicForm = React.createClass({
     event.preventDefault();
     var newIndex = event.target.value;
     this.props.onSelectChar(newIndex);
+    event.target.nextSibling.selectedIndex = 0;
   },
 
   handleCharOptSelection: function (event) {
@@ -33,13 +34,14 @@ var CharacteristicForm = React.createClass({
 
     return (
       <div>
+        <label>Ask a question:</label>
         <select
           onChange={this.handleCharSelection}>
           {characteristics}
         </select>
         <select
           onChange={this.handleCharOptSelection}>
-          <option key={-1} value="default">--Choose--</option>
+          <option key={-1} value="default">--Select--</option>
           {charOptions}
         </select>
       </div>
@@ -49,3 +51,5 @@ var CharacteristicForm = React.createClass({
 });
 
 module.exports = CharacteristicForm;
+
+        // <label>Choose a characteristic type:</label>
