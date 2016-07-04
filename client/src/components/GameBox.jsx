@@ -31,7 +31,6 @@ const GameBox = React.createClass({
     let selectedChar = this.listCharacteristics()[charIndex]
     this.setState({selectedChar: selectedChar});
     this.setState({selectedCharOpt: null});
-
   },
 
   listCharOptions: function () {

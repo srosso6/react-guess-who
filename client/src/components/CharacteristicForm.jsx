@@ -21,17 +21,11 @@ const CharacteristicForm = React.createClass({
       <option key={index} value={index}>{char}</option>
     );
 
-    var charOptions = null;
-    console.log("here 1", charOptions);
-    if(this.props.charOpts) {
-      console.log("here 2", charOptions);
-      var charOptions = this.props.charOpts.map((charOpt, index) =>
-        <option key={index} value={charOpt}>{charOpt}</option>
-      );
-      console.log("here 3", charOptions);
-    };
+    const charOptions = this.props.charOpts.map((charOpt, index) => {
+      return <option key={index} value={charOpt}>{charOpt}</option>
+      }
+    );
 
-console.log("here 4", charOptions);
     return (
       <div>
         <label>Ask a question:</label>
